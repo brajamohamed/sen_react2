@@ -12,29 +12,37 @@ const Header = () => {
       <Link to="/" className="navbar-brand ms-5">
         <img src="../rdc-redbus-logo.svg" alt="redbus-logo" />
       </Link>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-target="#menu"
+        data-bs-toggle="collapse"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
       <div className="collapse navbar-collapse" id="menu">
         <ul className="navbar-nav m-auto">
           <li className="nav-item">
             <Link to="/" href="/" className="nav-link">
-              <div className="d-flex align-items-center justify-content-center">
-                <img id="nav-icon" src={bus} alt="" />
-              </div>
+              {/* <div className="d-flex align-items-center justify-content-center"> */}
+              <img id="nav-icon" src={bus} alt="" />
+              {/* </div> */}
               <h5>Bus Ticket</h5>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/cab" className="nav-link">
-              <div className="d-flex align-items-center justify-content-center">
-                <img id="nav-icon" src={cab} alt="cab logo" />
-              </div>
+              {/* <div className="d-flex align-items-center justify-content-center"> */}
+              <img id="nav-icon" src={cab} alt="cab logo" />
+              {/* </div> */}
               <h5>Cab Rental</h5>
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/train" className="nav-link">
-              <div className="d-flex align-items-center justify-content-center">
-                <img id="nav-icon" src={train} alt="train-icon" />
-              </div>
+              {/* <div className="d-flex align-items-center justify-content-center"> */}
+              <img id="nav-icon" src={train} alt="train-icon" />
+              {/* </div> */}
 
               <h5>Train Tickets</h5>
             </Link>
