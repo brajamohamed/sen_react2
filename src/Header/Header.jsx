@@ -64,13 +64,13 @@ const Header = ({ setLoggedIn }) => {
             </li>
           </ul>
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item mx-auto">
               <button
                 id="logout"
-                className="text-white bg-danger border-0 rounded-3 p-2 fw-bolder"
+                className="bg-danger border-0 rounded-3 p-2 fw-bolder"
                 onClick={() => setLoggedIn(false)}
               >
-                <Link to="/login" className="nav-link">
+                <Link to="/login" className="nav-link text-white px-5">
                   Logout
                 </Link>
               </button>
