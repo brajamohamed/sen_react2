@@ -1,5 +1,8 @@
 #cab-hero {
-  height: 800px;
-  background-image: url("https://www.gtccabs.com/uploads/Deeplinkimage/920590164.jpg");
+  height: 80vh;
+  background-image: url("https://s1.rdbuz.com/seo/ind/Indian-taxi-cover_1660887570.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
 }

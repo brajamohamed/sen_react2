@@ -1,5 +1,4 @@
-#hero {
-  height: 800px;
-  background-image: url("https://akm-img-a-in.tosshub.com/businesstoday/images/story/202301/generic_banner_ind-sixteen_nine.png?size=948:533");
-  background-size: cover;
+.car-img {
+  min-height: 45vh;
+  max-height: 75vh;
 }

@@ -1,0 +1,10 @@
+.form-container {
+  height: 90vh;
+  background-image: url("https://etimg.etb2bimg.com/photo/69570333.cms");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.invalid-feedback {
+  color: yellow;
+}

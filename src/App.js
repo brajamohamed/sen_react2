@@ -6,19 +6,32 @@ import Cab from "./Cab/Cab";
 import Train from "./Train/Train";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    console.log(loggedIn);
+  }, [loggedIn]);
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Hero />}></Route>
-          <Route path="/cab" element={<Cab />}></Route>
-          <Route path="/train" element={<Train />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/signup" element={<Signup />}></Route>
-        </Routes>
+        {loggedIn ? (
+          <>
+            <Header setLoggedIn={setLoggedIn} />
+            <Routes>
+              <Route path="/" element={<Hero />}></Route>
+              <Route path="/cab" element={<Cab />}></Route>
+              <Route path="/train" element={<Train />}></Route>
+              <Route path="/login" element={<Login />}></Route>
+              <Route path="/signup" element={<Signup />}></Route>
+            </Routes>
+          </>
+        ) : (
+          <>
+            <Login setLoggedIn={setLoggedIn} />
+          </>
+        )}
       </div>
     </BrowserRouter>
   );
