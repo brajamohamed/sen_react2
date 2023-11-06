@@ -1,9 +1,11 @@
 import React from "react";
 import "./Login.css";
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { toBeInvalid } from "@testing-library/jest-dom/matchers";
 import userEvent from "@testing-library/user-event";
 const Login = ({ setLoggedIn }) => {
+  let navigateToHome = useNavigate();
   let emailRef = useRef();
   let pwdRef = useRef();
   const [formData, setFormData] = useState({ username: "", password: "" });
@@ -15,8 +17,9 @@ const Login = ({ setLoggedIn }) => {
     const isValidPwd = pwdRef.current.checkValidity();
     if (!formData.username == "" && !formData.password == "") {
       if (isValidEmail && isValidPwd) {
-        alert("Form submitted successfully");
+        alert("Validation successful");
         setLoggedIn(true);
+        navigateToHome("/");
       }
     } else {
       alert("Required fields cannot be empty");
@@ -27,8 +30,8 @@ const Login = ({ setLoggedIn }) => {
     setFormData({ ...formData, [name]: value });
   };
   return (
-    <div className="container-fluid form-container d-flex justify-content-center align-items-center">
-      <div className="px-5 py-3 bg-danger rounded-5">
+    <div className="form-container row d-flex justify-content-center align-items-center">
+      <div className="card col-xl-4 col-lg-6 col-md-8 px-5 py-3 bg-danger rounded-5">
         <form
           id="loginForm"
           onSubmit={handleSubmit}
@@ -71,7 +74,7 @@ const Login = ({ setLoggedIn }) => {
             <div className="invalid-feedback">Enter valid Password</div>
           </div>
 
-          <button type="submit" className="btn btn-primary w-100 mb-4">
+          <button type="submit" className="btn btn-primary w-100 my-4">
             Submit
           </button>
         </form>

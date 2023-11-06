@@ -70,7 +70,9 @@ const Header = ({ setLoggedIn }) => {
                 className="text-white bg-danger border-0 rounded-3 p-2 fw-bolder"
                 onClick={() => setLoggedIn(false)}
               >
-                Logout
+                <Link to="/login" className="nav-link">
+                  Logout
+                </Link>
               </button>
             </li>
           </ul>
