@@ -1,0 +1,6 @@
+.container-fluid {
+  background-image: url("https://camo.githubusercontent.com/255f9c315b366a481e7379b1d6d91584f888470c8c464cc663cd08f2d4c4fd4b/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313430302f312a7970744b78485643584330326364626f477456506a772e6a706567");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

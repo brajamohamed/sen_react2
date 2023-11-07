@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Signup.css";
 const Signup = () => {
   const navigateToLogin = useNavigate();
   const emailRef = useRef();
@@ -43,8 +44,8 @@ const Signup = () => {
     }
   };
   return (
-    <div className="container row d-flex flex-column align-items-center justify-content-center vh-100">
-      <div className="card col-lg-8 p-4 bg-danger">
+    <div className="container-fluid row d-fle align-items-center justify-content-center vh-100">
+      <div className="card col-xl-4 col-lg-6 p-4 bg-danger">
         <form
           id="validateForm"
           className="needs-validation"
