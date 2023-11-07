@@ -2,6 +2,7 @@ import React from "react";
 import "./Login.css";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { toBeInvalid } from "@testing-library/jest-dom/matchers";
 import userEvent from "@testing-library/user-event";
 const Login = ({ setLoggedIn }) => {
@@ -78,6 +79,17 @@ const Login = ({ setLoggedIn }) => {
             Submit
           </button>
         </form>
+        <div className="d-flex justify-content-center">
+          <p>
+            Don't have a account?
+            <span className="p-2">
+              <Link to="/signup" className="text-warning">
+                Signup
+              </Link>
+            </span>
+            Here
+          </p>
+        </div>
       </div>
     </div>
   );

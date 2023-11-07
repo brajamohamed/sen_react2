@@ -24,12 +24,17 @@ function App() {
               <Route path="/cab" element={<Cab />}></Route>
               <Route path="/train" element={<Train />}></Route>
               <Route path="/login" element={<Login />}></Route>
-              <Route path="/signup" element={<Signup />}></Route>
             </Routes>
           </>
         ) : (
           <>
-            <Login setLoggedIn={setLoggedIn} />
+            <Routes>
+              <Route
+                path="/"
+                element={<Login setLoggedIn={setLoggedIn} />}
+              ></Route>
+              <Route path="/signup" element={<Signup />}></Route>
+            </Routes>
           </>
         )}
       </div>
